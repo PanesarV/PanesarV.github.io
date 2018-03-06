@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing :border-box;
+  font-family: sans-serif;
+}
+.header, .footer {
+  background-color: maroon;
+  color:white;
+  padding: 15px;
+}
+.column {
+  float: left;
+  padding:15px;
+}
+.column img {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.menu {
+  width: 25%;
+}
+.content {
+  width: 75%;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: teal;
+  color: #ffffff;
+}
+.menu li:hover {
+  background-color: #0099cc
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>
+Enver Creek Secondary
+</h1>
+</div>
+<div class="clearfix">
+<div class="column menu">
+<ul>
+<li><a href="PanesarV.github.io/sports_report.html">Main Page</a></li>
+</ul>
+</div>
+
+<div class="column content">
+<img src="https://i.stack.imgur.com/AxPa6.png">
+<h1>
+Welcome
+</h1>
+<p>
+My Website
+</p>
+</div>
+</div>
+<div class="footer">
+<p>
+Footer Text
+</p>
+</div>
+</body>
+</html>
