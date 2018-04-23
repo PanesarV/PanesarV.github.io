@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--Code By Oskar K-->
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      1 in a Million Pizzaria
+    </title>
+  </head>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Bungee+Shade);
+    @import url(https://fonts.googleapis.com/css?family=Oswald);
+    body {
+      font-family: Bungee Shade;
+      background: white;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1em 0 6em;
+      color: red;
+    }
+    .wrapper {
+      margin: 3em 0;
+    }
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: relative;
+      transition: 0.5s color ease;
+      text-decoration: none;
+      color: red;
+      font-size: 2.0em;
+      padding: 20px;
+    }
+    a:hover {
+      color: green;
+    }
+    a.before:before,
+    a.after:after {
+      content: "";
+      transition: 0.5s all ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+    }
+    a.before:before {
+      top: -0.25em;
+    }
+    a.after:after {
+      bottom: 0.25em;
+    }
+    a.before:before,
+    a.after:after {
+      height: 5px;
+      height: 0.35rem;
+      width: 0;
+      background: green;
+    }
+    a.third:after,
+    a.sixth:before,
+    a.sixth:after {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    a.before:hover:before,
+    a.after:hover:after {
+      width: 100%;
+    }
+    hr {
+      background-color: #3D9970;
+      border-style: solid;
+    }
+    .footer {
+      background-color: #910000;
+      color: #393E46;
+      padding: 15px;
+      
+    }
+    h1 {
+      font-family: Bungee Shade;
+    }
+    p {
+      font-size: 25px;
+      font-family: Oswald;
+      color: green;
+    }
+    a {
+      font-family: Oswald;
+    }
+    tr {
+      float: center;
+    }
+    img {
+      float: right;
+    }
+    .hello {
+      font-family: Oswald;
+      color: black;
+      font-size:25px;
+    }
+    table{
+      width:550px;
+      margin-top;
+    }
+    .taco{
+     padding-right:10%;
+    }
+    {
+    box-sizing: border-box;
+}
+.header, .footer {
+    
+    color: white;
+    padding: 15px;
+    border:outset white 10px;
+   
+}
+.header {
+	margin-top:70px;
+}
+body {
+	background-color:white;
+    background-image: ;
+    min-height: 90%;
+    
+    }
+body,h1,h2,h3,h4,h5,h6 {
+	font-family:;
+    font-weight:bold;
+    }
+
+.footer2 {
+	float:right
+    }
+
+  </style>
+
+
+  <body>
+    <center>
+      <div class="wrapper">
+        <a class="third after">Home
+        </a>
+        <a class="third after">Location</a>
+        <a class="third after">About Us</a>
+        <a class="third after">Contact</a>
+      </div>
+    </center>
+    <hr>
+    <center>
+      <h1>1 in a Million Pizzaria</h1>
+    </center>
+    <hr>
+    <br>
+
+    <table>
+      <tr>
+        <th><img class="taco" src="https://i.imgur.com/njDDRS3.jpg" width="85%" height="25%"></th>
+      </tr>
+      <tr>
+        <td class="hello"> Our Pizza is top of the line quality and the best in town. Our toppings are always fresh and our pizza are very customizable! We have many mouth watering choices to chose from. </td>
+      </tr>
+    </table>
+
+    	<div class="footer">
+    <div class="footer2">
+    <p align=right>Contact Information:</p>
+    <p align=right>Phone: 604-604-6046 </p>
+	<p align=right>Fax: 604-604-6046</p>
+    </div>
+    
+    <p align=left>11111-11 Avenure</p>
+	<p align=left>Surrey, B.C. Canada</p>
+	<p align=left>V3S 8X2 </p> 
+   </div>
+
+
+  </body>
+
+
+
+</html>
