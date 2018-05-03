@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  </head>
+
+  <body>
+
+    <button onclick="myFunction()">Ask a question!</button>
+    <input id="myInput" type="text">
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        let userQuestion = ('Will I have a good day today?');
+        let randomNumber = Math.floor(Math.random() * 7);
+        let eightball = ('');
+        switch (randomNumber) {
+          case 1:
+            document.write('It is certain');
+            break;
+          case 2:
+            document.write('It is decidedly so');
+            break;
+          case 3:
+            document.write('Reply hazy try again');
+            break;
+          case 4:
+            document.write('Do not count on it');
+            break;
+          case 5:
+            document.write('My sources say no');
+            break;
+          case 6:
+            document.write('Outlook not so good');
+            break;
+          case 7:
+            document.write('Signs point to yes');
+            break;
+          case 0:
+            document.write('Cannot predict now');
+            break;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+      }
+      document.write(eightball);
+
+    </script>
+  </body>
+
+</html>
