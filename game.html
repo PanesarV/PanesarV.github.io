@@ -5,7 +5,7 @@
   function getUserChoice() {
     var userInput = prompt("Do you choose rock, paper or scissors?");
     userInput = userInput.toLowerCase();
-    if (userInput === "rock" || userInput === "paper" || userInput === "scissors" || userInput === "bomb") {
+    if (userInput === "rock" || userInput === "paper" || userInput === "scissors" || userInput === "bomb" || userInput === "lizard" || userInput === "spock");  {
       return userInput;
     } else {
       document.write("Error, not acceptable input!");
@@ -13,7 +13,7 @@
   }
 
   function getComputerChoice() {
-    var randomNumber = Math.floor(Math.random() * 3);
+    var randomNumber = Math.floor(Math.random() * 5);
     switch (randomNumber) {
       case 0:
         return "rock";
@@ -21,6 +21,10 @@
         return "paper";
       default:
         return "scissors";
+      case 2:
+      	return "lizard";
+      case 3:
+      	return "spock";
     }
   }
 
@@ -52,6 +56,17 @@
     if (userChoice === 'bomb') {
       return 'BOMB! SECRET WIN!';
     }
+    if (userChoice === "lizard") {
+      if (computerChoice === "spock") {
+        return "The computer won!";
+      } else {
+        return "You won!";
+        
+        if (userChoice === "rock") {
+      if (computerChoice === "spock") {
+        return "The computer won!";
+      } else {
+        return "You won!";
   }
 
   function playGame() {
@@ -66,6 +81,6 @@
 
   playGame();
 
-</script> 
+</script>
 </body>
 </html>
