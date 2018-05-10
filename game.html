@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html>
-<body>
-<script>
-  function getUserChoice() {
-    var userInput = prompt("Do you choose rock, paper or scissors?");
-    userInput = userInput.toLowerCase();
-    if (userInput === "rock" || userInput === "paper" || userInput === "scissors" || userInput === "bomb" || userInput === "lizard" || userInput === "spock");  {
-      return userInput;
-    } else {
-      document.write("Error, not acceptable input!");
-    }
-  }
 
-  function getComputerChoice() {
-    var randomNumber = Math.floor(Math.random() * 5);
-    switch (randomNumber) {
-      case 0:
-        return "rock";
-      case 1:
-        return "paper";
-      default:
-        return "scissors";
-      case 2:
-      	return "lizard";
-      case 3:
-      	return "spock";
-    }
-  }
+  <body>
+    <script>
+      function getUserChoice() {
+        var userInput = prompt("Do you choose rock, paper, scissors, lizard or spock?");
+        userInput = userInput.toLowerCase();
+        if (userInput === "rock" || userInput === "paper" || userInput === "scissors" || userInput === "bomb" || userInput === "lizard" || userInput === "spock") {
+          return userInput;
+        } else {
+          document.write("Error, not acceptable input!");
+        }
+      }
 
-  function determineWinner(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
-      return "The game is a tie!";
-    }
-    if (userChoice === "rock") {
-      if (computerChoice === "scissors") {
-        return "The computer won!";
-      } else {
-        return "You won!";
+      function getComputerChoice() {
+        var randomNumber = Math.floor(Math.random() * 5);
+        switch (randomNumber) {
+          case 0:
+            return "rock";
+          case 1:
+            return "paper";
+          default:
+            return "scissors";
+          case 2:
+            return "lizard";
+          case 3:
+            return "spock";
+        }
       }
-    }
-    if (userChoice === 'paper') {
-      if (computerChoice === 'scissors') {
-        return 'The computer won!';
-      } else {
-        return 'You won!';
-      }
-    }
-    if (userChoice === 'scissors') {
-      if (computerChoice === 'rock') {
-        return 'The computer won!';
-      } else {
-        return 'You won!';
-      }
-    }
-    if (userChoice === 'bomb') {
-      return 'BOMB! SECRET WIN!';
-    }
-    if (userChoice === "lizard") {
-      if (computerChoice === "spock") {
-        return "The computer won!";
-      } else {
-        return "You won!";
-      }
+
+      function determineWinner(userChoice, computerChoice) {
+        if (userChoice === computerChoice) {
+          return "The game is a tie!";
+        }
         if (userChoice === "rock") {
-      if (computerChoice === "spock") {
-        return "The computer won!";
-      } else {
-        return "You won!";
-  }
+          if (computerChoice === "scissors") {
+            return "The computer won!";
+          } else {
+            return "You won!";
+          }
+        }
+        if (userChoice === 'paper') {
+          if (computerChoice === 'scissors') {
+            return 'The computer won!';
+          } else {
+            return 'You won!';
+          }
+        }
+        if (userChoice === 'scissors') {
+          if (computerChoice === 'rock') {
+            return 'The computer won!';
+          } else {
+            return 'You won!';
+          }
+        }
+        if (userChoice === 'bomb') {
+          return 'BOMB! SECRET WIN!';
+        }
+        if (userChoice === "lizard") {
+          if (computerChoice === "spock") {
+            return "The computer won!";
+          } else {
+            return "You won!";
+          }
+        }
+        if (userChoice === "rock") {
+          if (computerChoice === "spock") {
+            return "The computer won!";
+          } else {
+            return "You won!";
+          }
+        }
+}
+        function playGame() {
+          var userChoice = getUserChoice();
+          var computerChoice = getComputerChoice();
+          document.write("User choice: " + userChoice);
+          document.write("<br>");
+          document.write("Computer's choice: " + computerChoice);
+          document.write("<br>");
+          document.write("The result: " + determineWinner(userChoice, computerChoice));
+        }
+        playGame();
 
-  function playGame() {
-    var userChoice = getUserChoice();
-    var computerChoice = getComputerChoice();
-    document.write("User choice: " + userChoice);
-    document.write("<br>");
-    document.write("Computer's choice: " + computerChoice);
-    document.write("<br>");
-    document.write("The result: " + determineWinner(userChoice, computerChoice));
-  }
+    </script>
+  </body>
 
-  playGame();
-
-</script>
-</body>
 </html>
