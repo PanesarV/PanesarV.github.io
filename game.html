@@ -12,7 +12,6 @@
           document.write("Error, not acceptable input!");
         }
       }
-
       function getComputerChoice() {
         var randomNumber = Math.floor(Math.random() * 5);
         switch (randomNumber) {
@@ -28,49 +27,105 @@
             return "spock";
         }
       }
-
       function determineWinner(userChoice, computerChoice) {
         if (userChoice === computerChoice) {
           return "The game is a tie!";
         }
         if (userChoice === "rock") {
           if (computerChoice === "scissors") {
-            return "The computer won!";
-          } else {
-            return "You won!";
-          }
-        }
-        if (userChoice === 'paper') {
-          if (computerChoice === 'scissors') {
-            return 'The computer won!';
-          } else {
-            return 'You won!';
-          }
-        }
-        if (userChoice === 'scissors') {
-          if (computerChoice === 'rock') {
-            return 'The computer won!';
-          } else {
-            return 'You won!';
-          }
-        }
-        if (userChoice === 'bomb') {
-          return 'BOMB! SECRET WIN!';
-        }
-        if (userChoice === "lizard") {
-          if (computerChoice === "spock") {
-            return "The computer won!";
-          } else {
-            return "You won!";
-          }
+            return "You Won!";
+          } 
         }
         if (userChoice === "rock") {
-          if (computerChoice === "spock") {
-            return "The computer won!";
-          } else {
-            return "You won!";
-          }
+          if (computerChoice === "paper") {
+            return "You Lost!";
+          } 
         }
+       if (userChoice === "rock") {
+          if (computerChoice === "lizard") {
+            return "You Won!";
+          } 
+        }
+         if (userChoice === "rock") {
+          if (computerChoice === "spock") {
+            return "You Lost!";
+          } 
+        }
+         if (userChoice === "paper") {
+          if (computerChoice === "rock") {
+            return "You Won!";
+          } 
+        }
+         if (userChoice === "paper") {
+          if (computerChoice === "scissors") {
+            return "You Lost!";
+          } 
+        }
+         if (userChoice === "paper") {
+          if (computerChoice === "spock") {
+            return "You Won!";
+          } 
+        }
+         if (userChoice === "paper") {
+          if (computerChoice === "lizard") {
+            return "You Lost!";
+          } 
+        }
+         if (userChoice === "scissors") {
+          if (computerChoice === "rock") {
+            return "You Lost!";
+          } 
+        }
+         if (userChoice === "scissors") {
+          if (computerChoice === "paper") {
+            return "You Won!";
+          } 
+        }
+         if (userChoice === "scissors") {
+          if (computerChoice === "lizard") {
+            return "You Won!";
+          } 
+        }
+         if (userChoice === "scissors") {
+          if (computerChoice === "spock") {
+            return "You Lost!";
+          } 
+        }
+         if (userChoice === "lizard") {
+          if (computerChoice === "rock") {
+            return "You Lost!";
+          } 
+        } if (userChoice === "lizard") {
+          if (computerChoice === "spock") {
+            return "You Won!";
+          } 
+        } if (userChoice === "lizard") {
+          if (computerChoice === "scissors") {
+            return "You Lost!";
+          } 
+        } if (userChoice === "lizard") {
+          if (computerChoice === "paper") {
+            return "You Won!";
+          } 
+        }
+         if (userChoice === "spock") {
+          if (computerChoice === "lizard") {
+            return "You Lost!";
+          } 
+        } if (userChoice === "spock") {
+          if (computerChoice === "rock") {
+            return "You Won!";
+          } 
+        } if (userChoice === "spock") {
+          if (computerChoice === "paper") {
+            return "You Lost!";
+          } 
+        } if (userChoice === "spock") {
+          if (computerChoice === "scissors") {
+            return "You Won!";
+          } 
+        }
+        
 }
         function playGame() {
           var userChoice = getUserChoice();
@@ -82,7 +137,6 @@
           document.write("The result: " + determineWinner(userChoice, computerChoice));
         }
         playGame();
-
     </script>
   </body>
 
