@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <style>
+      h1 {
+        font-family: Arial;
+      }
+
+      body {
+        color: #FF570C;
+        background-color: #323643;
+      }
+
+      hr {
+        border-style: solid;
+        color: #FF570C;
+      }
+
+    </style>
+    <center>
+      <h1>
+        Sleep Debt Calculator
+      </h1>
+    </center>
+    <hr>
+    <br>
+    <center>
+      <script>
+        function getSleepHours(day) {
+          let hours = prompt("How many hours of sleep did you get on " + day + "");
+          return Number(hours);
+        }
+
+        function getActualSleepHours() {
+          return getSleepHours("Monday") +
+            getSleepHours("Tuesday") +
+            getSleepHours("Wednesday") +
+            getSleepHours("Thursday") +
+            getSleepHours("Friday") +
+            getSleepHours("Saturday") +
+            getSleepHours("Sunday");
+        }
+
+        function getIdealSleepHours() {
+          let ideal = prompt("How much sleep is ideal for you in one night?");
+          return Number(ideal) * 7;
+        }
+
+        function calculateSleepDebt() {
+          let actualSleepHours = getActualSleepHours();
+          let idealSleepHours = getIdealSleepHours();
+          if (actualSleepHours === idealSleepHours) {
+            return document.write("That is the perfect amount of sleep!")
+          }
+          if (actualSleepHours < idealSleepHours) {
+            return document.write("It looks like you did not sleep enough this week! You underslept by " + (actualSleepHours - idealSleepHours) + " hours!")
+          }
+          if (actualSleepHours > idealSleepHours) {
+            return document.write("You overslept this week by " + (actualSleepHours - idealSleepHours) + " hours!")
+          }
+        }
+        calculateSleepDebt();
+
+      </script>
+    </center>
+  </body>
+
+</html>
