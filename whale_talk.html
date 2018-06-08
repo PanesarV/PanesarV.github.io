@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <h1>
+      WHALETALK
+    </h1>
+    <h2>
+      TRANSLATE HERE:
+    </h2>
+
+  </body>
+  <script>
+    let input = prompt('What do you want to translate?');
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let resultArray = [];
+    for (var i = 0; i < input.length; i++) {
+      if (input[i] === 'e') {
+        resultArray.push(input[i])
+      }
+      
+      if (input[i] === 'u') {
+        resultArray.push(input[i])
+      }
+      
+      for (var j = 0; j < vowels.length; j++) {
+        if (input[i] === vowels[j]) {
+          resultArray.push(input[i]);
+        }
+      }
+    }
+    
+    var whaleTalk = resultArray.join('').toUpperCase()
+    document.write(input)
+    document.write('=')
+    document.write(whaleTalk)
+
+  </script>
+
+</html>
