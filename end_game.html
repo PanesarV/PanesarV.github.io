@@ -6,16 +6,15 @@
     <script>
     
 function startGame(){
-			let reply = prompt('');
+			
 			let person = prompt('What is your name?');
       alert(	person + ' you wake up in a forest far far away from home, you are confused, lost, worried, scared, and cold. You are nott sure where to go but you see a couple lights in the near distance. You go to the lights and it appears to be a cabin, you walk in, it is empty. You look on the night stand next to you and you see a letter. It reads "You have been taken and now trapped in the world called Zoldas! If you wish to leave you must find a key which unlocks a moving hidden door, find the door, and escape. If you do not wish to do so, you will be stuck here for eternity and go insane from boredom. Goodluck Traveler!" This is where your journey begins~')
       let begin = prompt('You leave the cabin and now you have 4 choices. Where would you like to go next? North, East, South, or West?').toUpperCase();
       switch (begin) {
       case 'NORTH': 
-     prompt('You have now walked North. Infront of you seems to be some kind of pathway, would you like to follow this pathway?');
-     reply ();
-     if (reply = 'yes') {
-     alert('You go through the pathway and you see a door in the middle of the pathway, you see it requires a key.You need the key to continue.')
+      let pathway1 = prompt('You have now walked North. Infront of you seems to be some kind of pathway, would you like to follow this pathway?')
+     if ( pathway1 = 'yes') {
+     prompt('You go through the pathway and you see a door in the middle of the pathway, you see it requires a key.You need the key to continue. What would you like to do?')
      }
      else {
      alert('You keep walking forward but there is nothing ahead.');
@@ -25,22 +24,20 @@ function startGame(){
       alert('You see a dark path and follow it but you get lost');
       break;
       case 'SOUTH':
-      prompt('You head behind the cabin and end up where you first woke up. You see a key lying there. Would you like to pick it up?');
-      reply ();
-      
+      let pathway2 = prompt('You head behind the cabin and end up where you first woke up. You see a key lying there. Would you like to pick it up?');
+      if (pathway2 = 'yes') {
+      prompt('You have now picked up the key to a magic door, where would you like to go next?')
+      }
+      else {
+      prompt ('Where would you like to go next?')
+      } 
       break;   
       case 'WEST':
       alert('You see a dark path and follow it but you get lost');
       break;
       }
-
-
-
 }
 startGame();
-
-
-
     </script>
     
     
