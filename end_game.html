@@ -12,30 +12,32 @@ function startGame(){
       let begin = prompt('You leave the cabin and now you have 4 choices. Where would you like to go next? North, East, South, or West?').toUpperCase();
       switch (begin) {
       case 'NORTH': 
-      let pathway1 = prompt('You have now walked North. Infront of you seems to be some kind of pathway, would you like to follow this pathway?')
-     if ( pathway1 = 'yes') {
-     prompt('You go through the pathway and you see a door in the middle of the pathway, you see it requires a key.You need the key to continue. What would you like to do?')
-     }
-     else {
-     alert('You keep walking forward but there is nothing ahead.');
-     }
+       prompt('You have now walked North. Infront of you seems to be some kind of pathway, would you like to follow this pathway?')
+       pathway1();
       break;
       case 'EAST':
       alert('You see a dark path and follow it but you get lost');
       break;
       case 'SOUTH':
-      let pathway2 = prompt('You head behind the cabin and end up where you first woke up. You see a key lying there. Would you like to pick it up?');
-      if (pathway2 = 'yes') {
-      prompt('You have now picked up the key to a magic door, where would you like to go next?')
-      }
-      else {
-      prompt ('Where would you like to go next?')
-      } 
+      prompt('You head behind the cabin and end up where you first woke up. You see a key lying there. Would you like to pick it up? YES OR NO?').toUpperCase();
+      pathway2();
       break;   
       case 'WEST':
       alert('You see a dark path and follow it but you get lost');
       break;
       }
+}
+function Gpathway {
+let pathway1 = prompt('You have followed the pathway to a bridge, under the bride there is a flashlight, would you like to inspect it?');
+if (pathway1 = 'yes') {
+prompt('You see this flashlight has a battery gauge on it, it is only good for a one time use, do you want to pick it up?');
+}
+else {
+alert('You keep walking forward into a dark cave, you can not see anything and you fall into a big hole');
+
+} 
+
+
 }
 startGame();
     </script>
