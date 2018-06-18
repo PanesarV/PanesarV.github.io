@@ -5,39 +5,164 @@
 
     <script>
     
+startGame();
 function startGame(){
-			
-			let person = prompt('What is your name?');
-      alert(	person + ' you wake up in a forest far far away from home, you are confused, lost, worried, scared, and cold. You are nott sure where to go but you see a couple lights in the near distance. You go to the lights and it appears to be a cabin, you walk in, it is empty. You look on the night stand next to you and you see a letter. It reads "You have been taken and now trapped in the world called Zoldas! If you wish to leave you must find a key which unlocks a moving hidden door, find the door, and escape. If you do not wish to do so, you will be stuck here for eternity and go insane from boredom. Goodluck Traveler!" This is where your journey begins~')
-      let begin = prompt('You leave the cabin and now you have 4 choices. Where would you like to go next? North, East, South, or West?').toUpperCase();
-      switch (begin) {
-      case 'NORTH': 
-       prompt('You have now walked North. Infront of you seems to be some kind of pathway, would you like to follow this pathway?')
-       pathway1();
-      break;
-      case 'EAST':
-      alert('You see a dark path and follow it but you get lost');
-      break;
-      case 'SOUTH':
-      prompt('You head behind the cabin and end up where you first woke up. You see a key lying there. Would you like to pick it up? YES OR NO?').toUpperCase();
-      pathway2();
-      break;   
-      case 'WEST':
-      alert('You see a dark path and follow it but you get lost');
-      break;
-      }
+var yolo = prompt('Are you ready to play?').toUpperCase();
+
+if (yolo === "YES") {
+  alert('Great! Lets continue');
 }
-function Gpathway {
-let pathway1 = prompt('You have followed the pathway to a bridge, under the bride there is a flashlight, would you like to inspect it?');
-if (pathway1 = 'yes') {
-prompt('You see this flashlight has a battery gauge on it, it is only good for a one time use, do you want to pick it up?');
+if (yolo !== 'YES' || yolo === 'NO') {
+  alert("I didn't understand your choice. Hit YES. Refresh Page to Start again!");
+  document.write("I didn't understand your choice. Yes or no. ")
+  startGame();
 }
-else {
-alert('You keep walking forward into a dark cave, you can not see anything and you fall into a big hole');
+var user = prompt("You wake up in a forest. You forget your name but remember you have the power of sonic speed. An Enemy reveals himself in front of you. Oualateja! Do you choose to fight? Or do you choose to run?").toUpperCase();
 
-} 
+switch (user) {
+  case 'RUN':
+    if (user === 'RUN') {
+      alert("You are running from the Oualateja, which is a very intelligent choice. As you must collect power rings to enhance your strength to defeat Oualateja. But you must go fast otherwise Oualateja shall catch up to you and capture you.")
+    }
+    break;
+  case 'FIGHT':
+    if (user === 'FIGHT') {
+      alert("Oualateja is too powerful to defeat. He captures you but you manage to escape him and run. In order to defeat him, you must collect power rings to enhance your strength. You must go fast otherwise Oualateja shall catch up to you and capture you.")
+    }
+    break;
+  default:
+    if (user !== 'RUN' || user !== 'FIGHT') {}
+    alert("I didn't understand your choice. Hit Run or Fight.");
+    startGame();
+   
+}
+alert("You must go now find the rings. Use the controls to guide you to finding them. (Forward, Backward, Left, Right)")
+var a = prompt('Where shall you go?').toUpperCase();
+if (a === 'BACKWARD' || a === 'RIGHT') {
+alert('Cannot go that way! Left or Forward!')
+prompt('')
+}
+if (a === 'FORWARD') {
+
+  var b = prompt('You see a house in front of you. It seems there might be something important in there? Shall we open the door?').toUpperCase();
+  if (b === 'OPEN DOOR' || b === 'YES') {
+    alert('The door seems to be locked. Maybe you should look around.')
+  } else {
+    alert('I didnt understand your choice. Hit yes or Open door. Refresh to Play Again.')
+    
+  }
 
 
+  var c = prompt('There seems to be a path ahead of you. Shall you go left and check it out?').toUpperCase();
+  if (c === 'LEFT' || c === 'YES') {
+    alert('Here beholds an old lady. She asks you if you want the key to the house.')
+  } else {
+    alert('I didnt understand your choice. Hit yes or go left. Refresh to Play Again.')
+   
+  }
+  var d = prompt('What shall you say?').toUpperCase();
+  if (d === 'YES') {
+    alert("The only way to get the key is if you answer the old lady’s riddle.")
+  } else if (d === "NO") {
+    alert('Oh no, You did not grab the key fast enough so Mr. Eggman came up and captured you! Refresh page to start over!')
+    
+  } else {
+    alert('I didnt understand your choice. Hit yes or go left. Refresh to Play Again.')
+    
+  }
+  var e = prompt('What dress can never be worn?').toUpperCase();
+  if (e === 'ADDRESS') {
+    alert('Correct, You now behold the key')
+  } else {
+    alert('Wrong. To answer again')
+    
+  }
+var f = prompt('You see a path to your right! Where shall you go?').toUpperCase();
+  if (f === 'RIGHT') {
+    alert('You are back to where you were! Where shall you go now?')
+  } else {
+    alert('I did not understand this command, you can only go right! Refresh page to start over!')
+   
+  }
+  var g = prompt('Maybe you should go back to the house? but what direction is it?').toUpperCase();
+  if (g === 'FORWARD') {
+    alert('You see the same house but it looks like the key the old lady gave you fits in the key slot, lets see if it does')
+  } else {
+    alert('Wrong. To answer again, refresh page')
+    
+  }
+  var h = prompt('What are you going to do?').toUpperCase();
+  if (h === 'OPEN DOOR') {
+    alert('You unlock the door with your key and enter house. You find the missing ring! BUT OH NO!!!! Oualateja has caught up to you, but you behold the power ring to defeat him. It is time to fight!')
+  }
+  var i = prompt('Oualateja goes for an attack, Shall you choose to (Block or Hit)').toUpperCase();
+  if (i === 'BLOCK') {
+    alert('Good move, Oualateja has tripped on himself and knocked himself out. YOU WIN!')
+  } else if (i === 'HIT') {
+    alert('You hit Oualateja before he could hit you. He is now knocked out. YOU WIN!')
+  } else {
+    alert('Wrong. To answer again, refresh page')
+    
+  }
+} else if (a === 'LEFT') {
+
+  var c = prompt('There seems to be a path ahead of you. Shall you go left and check it out?').toUpperCase();
+  if (c === 'LEFT' || c === 'YES') {
+    alert('Here beholds an old lady. She asks you if you want the key to the house.')
+  } else {
+    alert('I didnt understand your choice. Hit yes or go left. Refresh to Play Again.')
+    
+  }
+  var d = prompt('What shall you say?').toUpperCase();
+  if (d === 'YES') {
+    alert("The only way to get the key is if you answer the old lady’s riddle.")
+  } else if (d === "NO") {
+    alert('Oh no, You did not grab the key fast enough so Oualateja came up and captured you! ')
+   
+  } else {
+    alert('I didnt understand your choice. Hit yes or go left.')
+    
+  }
+  var e = prompt('What dress can never be worn?').toUpperCase();
+  if (e === 'ADDRESS') {
+    alert('Correct, You now behold the key')
+  } else {
+    alert('Wrong. To answer again')
+
+  }
+  }
+ var f = prompt('You see a path to your right! Where shall you go?').toUpperCase();
+if (f === 'RIGHT') {
+  alert('You are back to where you were! Where shall you go now?')
+} else {
+  alert('I did not understand this command, you can only go right!')
+
+}
+var g = prompt('Maybe you should go back to the house? but what direction is it?').toUpperCase();
+if (g === 'FORWARD') {
+  alert('You see the same house but it looks like the key the old lady gave you fits in the key slot, lets see if it does')
+} else {
+  alert('Wrong. To answer again, refresh page')
+ 
+}
+var h = prompt('What are you going to do?').toUpperCase();
+if (h === 'OPEN DOOR') {
+  alert('You unlock the door with your key and enter house. You find the missing ring! BUT OH NO!!!! Oualateja has caught up to you, but you behold the power ring to defeat him. It is time to fight!')
+}
+var i = prompt('Oualateja goes for an attack, Shall you choose to (Block or Hit)').toUpperCase();
+if (i === 'BLOCK') {
+  alert('Good move, Oualateja has tripped on himself and knocked himself out. YOU WIN!')
+    
+} else if (i === 'HIT') {
+  alert('You hit Oualateja before he could hit you. He is now knocked out. YOU WIN!')
+
+} else {
+  alert('Wrong. To answer again, refresh page')
+ 
+}
+while(i === 'BLOCK' || i === 'HIT') {
+alert('You win, why are you still on this?');
+}
 }
 startGame();
     </script>
